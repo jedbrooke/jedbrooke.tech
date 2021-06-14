@@ -1,0 +1,11 @@
+
+title: "hello"
+date: "April 20th, 2069"
+body:
+  [
+    text: "hello this is some text",
+    local-image: "test.png",
+    web-image: "https://upload.wikimedia.org/wikipedia/en/a/a5/Cheese.png",
+    sub-header: "more text oh yeah",
+    text: "hello this is the second piece of text"
+  ]

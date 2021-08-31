@@ -1,11 +1,18 @@
 
 title: "test"
 date: "April 20th, 2069"
+tags: ["foo","bar","baz"]
 body:
   [
-    text: "hello this is some text",
-    local-image: "kirby.png",
-    web-image: "https://upload.wikimedia.org/wikipedia/en/a/a5/Cheese.png",
+    local-image: {
+      src: "test.png",
+      alt: "test image"
+    },
+    text: "hello, <em>this</em> is <span style=\"color: blue\">some</span> text",
+    web-image: {
+      src: "https://upload.wikimedia.org/wikipedia/en/a/a5/Cheese.png",
+      alt: "A block of cheese"
+    },
     sub-header: "more text oh yeah",
     text: "hello this is the second piece of text"
   ]

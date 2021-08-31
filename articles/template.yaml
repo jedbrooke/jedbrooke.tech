@@ -1,11 +1,19 @@
 
-title: "hello"
+title: "Fake Project For Testing Purposes"
 date: "April 20th, 2069"
+draft: true
+tags: ["testing","fakeness","graphics","FPGA"]
 body:
   [
-    text: "hello this is some text",
-    local-image: "test.png",
-    web-image: "https://upload.wikimedia.org/wikipedia/en/a/a5/Cheese.png",
+    text: "hello this is some text, sample text, some kind of first paragraph of text.",
+    local-image: {
+      src: "test.png",
+      alt: "test image"
+    },
+    web-image: {
+      src: "https://upload.wikimedia.org/wikipedia/en/a/a5/Cheese.png",
+      alt: "A block of cheese"},
     sub-header: "more text oh yeah",
-    text: "hello this is the second piece of text"
+    text: "hello this is the second piece of text",
+    text: "even more text"
   ]

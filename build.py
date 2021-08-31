@@ -47,11 +47,15 @@ ITEM_ACTIONS = {
 
 
 def main():
+
+    # generate sub_pages
     with open(HEADER_PATH) as fh:
         header_data = fh.read()
     page_template = bs4.BeautifulSoup(header_data,features="lxml")
     for path in os.listdir(ARTICLES_PATH):
-        with open(os.path.join(ARTICLES_PATH,path)) as article_yaml:
+            input_file = os.path.join(ARTICLES_PATH,path)
+            output_file = os.path.join("public_html",path.replace(".yaml",".html"))
+        with open(input_file) as article_yaml:
             data = yaml.safe_load(article_yaml)
             print(data)
             if 'draft' in data and data['draft'] == True:
@@ -76,7 +80,7 @@ def main():
                     for k,v in item.items():
                         article_content.append(ITEM_ACTIONS[k](v))
                 
-                with open(os.path.join("public_html",path.replace(".yaml",".html")),"w") as ofh:
+                with open(output_file,"w") as ofh:
                     ofh.write(html.prettify())
         print("------")
 
